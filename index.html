@@ -18,58 +18,169 @@
 </script>
   <style>
 :root {
-  --bg: #f5f7fa;
-  --text: #0b1f33;
-  --muted: #5a6b7b;
-  --border: #dbe3ea;
-  --primary: #0071dc;
+  --bg: #f4f6f8;
+  --text: #0f172a;
+  --muted: #5f6c7b;
+  --border: #d9e0e6;
+  --primary: #0071dc; /* Sam’s blue */
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--bg);
+  margin: 0;
   font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
 }
 
+/* LAYOUT */
+.container {
+  max-width: 720px;
+  margin: auto;
+  padding: 28px 18px 56px;
+  text-align: center;
+}
+
+/* BRAND */
 .brand {
   font-weight: 700;
   font-size: 20px;
   color: var(--primary);
+  margin-bottom: 20px;
+}
+
+/* CARD IMAGE */
+.card-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 26px;
 }
 
 .card-mask {
-  border-radius: 12px;
+  background: #fff;
+  padding: 12px;
+  border-radius: 10px;
   border: 1px solid var(--border);
 }
 
+.card-wrap img {
+  width: 250px;
+  max-width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+/* HEADLINE */
 h1 {
   font-size: 30px;
   font-weight: 800;
+  margin: 0 0 10px;
+}
+
+h1 span {
   color: var(--text);
 }
 
+/* SUBTEXT */
 .sub {
+  font-size: 15px;
   color: var(--muted);
+  margin-bottom: 26px;
 }
 
+/* CTA BUTTON — SAM’S STYLE */
 .cta {
   background: var(--primary);
   color: #fff;
-  border-radius: 8px;
+  border: none;
+  min-width: 260px;
+  height: 52px;
+  padding: 0 24px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
   text-transform: none;
-  letter-spacing: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
 }
 
 .cta:hover {
   background: #005bb5;
 }
 
-.step {
-  border-radius: 10px;
-  background: #ffffff;
+/* HOW IT WORKS */
+.how {
+  margin-top: 44px;
 }
 
+.how h2 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+/* STEPS */
+.step {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 16px 18px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 12px;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.step strong {
+  display: block;
+  font-size: 15px;
+}
+
+.step span {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* STEP NUMBER */
 .num {
+  min-width: 32px;
+  height: 32px;
+  border-radius: 4px;
   background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FINAL CTA */
+.final-cta {
+  margin-top: 30px;
+}
+
+/* FOOTER */
+.footer {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 38px;
+}
+
+/* DESKTOP BLOCK MESSAGE */
+#desktop-message {
+  display: none;
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--text);
 }
 </style>
 </head>
