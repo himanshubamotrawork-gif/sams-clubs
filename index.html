@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get $750 Sam’s Club Gift Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HNYLQQJHC6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HNYLQQJHC6', {
+     debug_mode: false
+});
+</script>
+  <style>
+:root {
+  --bg: #f5f7fa;
+  --text: #0b1f33;
+  --muted: #5a6b7b;
+  --border: #dbe3ea;
+  --primary: #0071dc;
+}
+
+body {
+  background: var(--bg);
+  font-family: 'Inter', sans-serif;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--primary);
+}
+
+.card-mask {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.sub {
+  color: var(--muted);
+}
+
+.cta {
+  background: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.cta:hover {
+  background: #005bb5;
+}
+
+.step {
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.num {
+  background: var(--primary);
+}
+</style>
+</head>
+
+<body>
+
+  <div id="desktop-message">
+    <h2>⚠️ Mobile Device Required</h2>
+    <p>Please visit this page using a mobile phone to continue.</p>
+  </div>
+
+  <div id="mobile-content">
+    <div class="container">
+
+      <div class="brand">Sam’s Club</div>
+
+      <div class="card-wrap">
+        <div class="card-mask">
+          <img src="Sam’s Club-giftcard.png" alt="Sam’s Club Gift Card">
+        </div>
+      </div>
+
+      <h1>Get <span>$750 Sam’s Club Gift Card</span></h1>
+      <p class="sub">
+        
+      </p>
+
+      <button class="cta" onclick="redirect()">Start Now</button>
+
+      <div class="how">
+        <h2>How It Works</h2>
+
+        <div class="step">
+          <div class="num">1</div>
+          <div>
+            <strong>Click to Start</strong>
+            <span>Tap the button above to begin your reward journey</span>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="num">2</div>
+          <div>
+            <strong>Enter Your Info</strong>
+            <span>Enter a valid email ID</span>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="num">3</div>
+          <div>
+            <strong>Complete Offers</strong>
+            <span>Complete three to five offers</span>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="num">4</div>
+          <div>
+            <strong>Receive Your Reward</strong>
+            <span>Get your Sam’s Club gift card within 24 hours</span>
+          </div>
+        </div>
+
+        <div class="final-cta">
+          <button class="cta" onclick="redirect()">Claim Your Sam’s Club Gift Card</button>
+        </div>
+      </div>
+
+      <div class="footer">
+      </div>
+
+    </div>
+  </div>
+  <script>
+let clicked = false;
+
+function redirect() {
+  if (clicked) return;
+  clicked = true;
+if (typeof gtag === 'function') {
+  
+gtag('event', 'start_now_click', {
+  event_category: 'CTA',
+  event_label: 'Sam’s Club Gift Card',
+  value: 1,
+  debug_mode: false,
+  transport_type: 'beacon'
+});
+}
+  setTimeout(function () {
+    window.location.href = "https://glctrk.org/aff_c?offer_id=2965&aff_id=17763";
+  }, 900);
+}
+
+  (function () {
+    var isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent);
+
+    if (!isMobile) {
+      document.getElementById("mobile-content").style.display = "none";
+      document.getElementById("desktop-message").style.display = "block";
+    }
+  })();
+</script>
+</body>
+</html>
