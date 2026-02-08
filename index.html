@@ -261,29 +261,19 @@ let clicked = false;
 function redirect() {
   if (clicked) return;
   clicked = true;
-if (typeof gtag === 'function') {
-  
-gtag('event', 'start_now_click', {
-  event_category: 'CTA',
-  event_label: 'Sam’s Club Gift Card',
-  value: 1,
-  debug_mode: false,
-  transport_type: 'beacon'
-});
-}
-  setTimeout(function () {
-    window.location.href = "https://glctrk.org/aff_c?offer_id=2965&aff_id=17763";
-  }, 900);
-}
 
-  (function () {
-    var isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent);
+  if (typeof gtag === 'function') {
+    gtag('event', 'start_now_click', {
+      event_category: 'CTA',
+      event_label: 'Sam’s Club Gift Card',
+      value: 1,
+      transport_type: 'beacon'
+    });
+  }
 
-    if (!isMobile) {
-      document.getElementById("mobile-content").style.display = "none";
-      document.getElementById("desktop-message").style.display = "block";
-    }
-  })();
+  // Instant redirect (no delay)
+  window.location.href = "https://glctrk.org/aff_c?offer_id=2965&aff_id=17763";
+}
 </script>
 </body>
 </html>
