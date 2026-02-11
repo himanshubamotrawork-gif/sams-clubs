@@ -20,10 +20,11 @@
 :root {
   --primary: #0b5ed7;
   --primary-dark: #084298;
-  --bg: #e9f2ff;
+  --bg: #eef4ff;
   --card-bg: #ffffff;
-  --text: #0f172a;
-  --muted: #5f6c7b;
+  --steps-bg: #f3f6fb;
+  --text: #1f2937;
+  --muted: #6b7280;
 }
 
 /* RESET */
@@ -34,72 +35,85 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(180deg, #e9f2ff, #dbe9ff);
+  background: linear-gradient(180deg, #eef4ff, #e3ecff);
   color: var(--text);
 }
 
-/* CONTAINER */
+/* MAIN CARD */
 .container {
-  max-width: 480px;
-  margin: 18px auto;
-  padding: 20px 18px 22px;
+  max-width: 500px;
+  margin: 25px auto;
+  padding: 28px 22px 28px;
   background: var(--card-bg);
-  border-radius: 26px;
-  box-shadow: 0 25px 60px rgba(11, 94, 215, 0.15);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(11, 94, 215, 0.12);
   text-align: center;
 }
 
 /* BRAND */
 .brand {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 22px;
   color: var(--primary);
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
-/* CARD IMAGE */
+/* IMAGE */
 .card-wrap {
-  margin-bottom: 14px;
+  margin-bottom: 18px;
   display: flex;
   justify-content: center;
 }
 
 .card-wrap img {
-  width: 170px;
+  width: 180px;
   max-width: 100%;
-  border-radius: 14px;
+  border-radius: 16px;
+}
+
+/* DIVIDER */
+.container hr {
+  border: none;
+  height: 1px;
+  background: #e5e7eb;
+  margin: 18px 0 22px;
 }
 
 /* HEADLINE */
 h1 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 800;
-  margin: 0 0 14px;
-  line-height: 1.25;
+  margin: 0 0 6px;
 }
 
-/* HOW SECTION */
+.sub {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+/* STEPS BOX */
 .how {
-  margin-top: 12px;
-  background: #f4f8ff;
-  padding: 14px;
-  border-radius: 16px;
+  background: var(--steps-bg);
+  border-radius: 18px;
+  padding: 18px;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
+/* HIDE "How It Works" title if you want Amazon style */
 .how h2 {
-  font-size: 16px;
-  font-weight: 800;
-  margin-bottom: 12px;
-  color: var(--primary-dark);
+  display: none;
 }
 
-/* STEPS */
+/* STEP ITEM */
 .step {
   display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  margin-bottom: 10px;
-  text-align: left;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
 }
 
 .step:last-child {
@@ -107,44 +121,43 @@ h1 {
 }
 
 .num {
-  min-width: 24px;
-  height: 24px;
+  min-width: 34px;
+  height: 34px;
   border-radius: 50%;
   background: var(--primary);
   color: #fff;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .step strong {
-  font-size: 13px;
-  display: block;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .step span {
-  font-size: 12px;
-  color: var(--muted);
+  display: none; /* hides subtext like Amazon layout */
 }
 
 /* CTA */
 .final-cta {
-  margin-top: 14px;
+  margin-top: 10px;
 }
 
 .cta {
   width: 100%;
-  height: 50px;
+  height: 58px;
+  border: none;
+  border-radius: 14px;
+  font-size: 17px;
+  font-weight: 700;
   background: linear-gradient(180deg, var(--primary), var(--primary-dark));
   color: #fff;
-  border: none;
-  font-size: 15px;
-  font-weight: 700;
-  border-radius: 999px;
   cursor: pointer;
-  box-shadow: 0 12px 25px rgba(11, 94, 215, 0.35);
+  box-shadow: 0 12px 30px rgba(11, 94, 215, 0.3);
   transition: all 0.2s ease;
 }
 
@@ -153,149 +166,9 @@ h1 {
 }
 
 .footer {
-  font-size: 10px;
+  font-size: 11px;
   color: var(--muted);
-  margin-top: 14px;
-}
-:root {
-  --primary: #0b5ed7;
-  --primary-dark: #084298;
-  --bg: #e9f2ff;
-  --card-bg: #ffffff;
-  --text: #0f172a;
-  --muted: #5f6c7b;
-}
-
-/* RESET */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(180deg, #e9f2ff, #dbe9ff);
-  color: var(--text);
-}
-
-/* CONTAINER */
-.container {
-  max-width: 480px;
-  margin: 18px auto;
-  padding: 20px 18px 22px;
-  background: var(--card-bg);
-  border-radius: 26px;
-  box-shadow: 0 25px 60px rgba(11, 94, 215, 0.15);
-  text-align: center;
-}
-
-/* BRAND */
-.brand {
-  font-weight: 700;
-  font-size: 18px;
-  color: var(--primary);
-  margin-bottom: 14px;
-}
-
-/* CARD IMAGE */
-.card-wrap {
-  margin-bottom: 14px;
-  display: flex;
-  justify-content: center;
-}
-
-.card-wrap img {
-  width: 170px;
-  max-width: 100%;
-  border-radius: 14px;
-}
-
-/* HEADLINE */
-h1 {
-  font-size: 22px;
-  font-weight: 800;
-  margin: 0 0 14px;
-  line-height: 1.25;
-}
-
-/* HOW SECTION */
-.how {
-  margin-top: 12px;
-  background: #f4f8ff;
-  padding: 14px;
-  border-radius: 16px;
-}
-
-.how h2 {
-  font-size: 16px;
-  font-weight: 800;
-  margin-bottom: 12px;
-  color: var(--primary-dark);
-}
-
-/* STEPS */
-.step {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  margin-bottom: 10px;
-  text-align: left;
-}
-
-.step:last-child {
-  margin-bottom: 0;
-}
-
-.num {
-  min-width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: var(--primary);
-  color: #fff;
-  font-weight: 700;
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.step strong {
-  font-size: 13px;
-  display: block;
-}
-
-.step span {
-  font-size: 12px;
-  color: var(--muted);
-}
-
-/* CTA */
-.final-cta {
-  margin-top: 14px;
-}
-
-.cta {
-  width: 100%;
-  height: 50px;
-  background: linear-gradient(180deg, var(--primary), var(--primary-dark));
-  color: #fff;
-  border: none;
-  font-size: 15px;
-  font-weight: 700;
-  border-radius: 999px;
-  cursor: pointer;
-  box-shadow: 0 12px 25px rgba(11, 94, 215, 0.35);
-  transition: all 0.2s ease;
-}
-
-.cta:hover {
-  transform: translateY(-2px);
-}
-
-.footer {
-  font-size: 10px;
-  color: var(--muted);
-  margin-top: 14px;
+  margin-top: 18px;
 }
     </style>
 
