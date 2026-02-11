@@ -18,11 +18,12 @@
 </script>
   <style>
 :root {
-  --bg: #f4f6f8;
-  --text: #0f172a;
-  --muted: #5f6c7b;
-  --border: #d9e0e6;
-  --primary: #0071dc; /* Sam’s blue */
+  --bg: #eef2f6;
+  --card-bg: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --primary: #0071dc;
 }
 
 /* RESET */
@@ -33,156 +34,137 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: var(--bg);
+  background: linear-gradient(180deg,#eef2f6,#e6edf5);
   color: var(--text);
-  overflow-x: hidden;
 }
 
-/* LAYOUT */
+/* MASTER WRAPPER */
 .container {
-  max-width: 720px;
-  margin: auto;
-  padding: 28px 18px 56px;
+  max-width: 520px;
+  margin: 40px auto;
+  padding: 32px 22px 36px;
+  background: var(--card-bg);
+  border-radius: 28px;
+ box-shadow: 0 30px 70px rgba(0,0,0,0.10);
   text-align: center;
 }
 
 /* BRAND */
 .brand {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   color: var(--primary);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
-/* CARD IMAGE */
 .card-wrap {
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
-  margin-bottom: 26px;
-}
-
-.card-mask {
-  background: #fff;
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid var(--border);
 }
 
 .card-wrap img {
-  width: 250px;
+  width: 210px;
   max-width: 100%;
-  display: block;
-  border-radius: 8px;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
 /* HEADLINE */
 h1 {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 800;
-  margin: 0 0 10px;
+  margin: 0 0 8px;
+  line-height: 1.25;
+  letter-spacing: -0.3px;
 }
-
-h1 span {
-  color: var(--text);
-}
-
-/* SUBTEXT */
 .sub {
-  font-size: 15px;
+  font-size: 14px;
   color: var(--muted);
-  margin-bottom: 26px;
+  margin-bottom: 22px;
 }
 
-/* CTA BUTTON — SAM’S STYLE */
+/* CTA BUTTON */
 .cta {
+  width: 100%;
+  height: 60px;
   background: var(--primary);
   color: #fff;
   border: none;
-  min-width: 260px;
-  height: 52px;
-  padding: 0 24px;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 700;
   border-radius: 999px;
   cursor: pointer;
-  text-transform: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s ease;
+  transition: all 0.2s ease;
+  box-shadow: 0 10px 25px rgba(0,113,220,0.25);
 }
 
 .cta:hover {
-  background: #005bb5;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(0,113,220,0.35);
 }
 
 /* HOW IT WORKS */
 .how {
-  margin-top: 44px;
+  margin-top: 24px;
+  background: #f7f9fc;
+  padding: 22px;
+  border-radius: 20px;
 }
 
 .how h2 {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 800;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 /* STEPS */
 .step {
-  background: #ffffff;
-  border-radius: 999px;
-  padding: 16px 18px;
   display: flex;
-  gap: 14px;
-  align-items: center;
-  margin-bottom: 12px;
-  border: 1px solid var(--border);
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 16px;
   text-align: left;
 }
 
-.step strong {
-  display: block;
-  font-size: 15px;
+.step:last-child {
+  margin-bottom: 0;
 }
 
-.step span {
-  font-size: 14px;
-  color: var(--muted);
-}
-
-/* STEP NUMBER */
 .num {
-  min-width: 32px;
-  height: 32px;
-  border-radius: 99px;
+  min-width: 28px;
+  height: 28px;
+  border-radius: 50%;
   background: var(--primary);
   color: #fff;
   font-weight: 700;
+  font-size: 13px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* FINAL CTA */
+.step strong {
+  font-size: 14px;
+  display: block;
+}
+
+.step span {
+  font-size: 13px;
+  color: var(--muted);
+}
+
 .final-cta {
-  margin-top: 30px;
+  margin-top: 24px;
 }
 
-/* FOOTER */
 .footer {
-  font-size: 12px;
-  color: #6b7280;
-  margin-top: 38px;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 24px;
 }
+    </style>
 
-/* DESKTOP BLOCK MESSAGE */
-#desktop-message {
-  display: none;
-  text-align: center;
-  padding: 80px 20px;
-  color: var(--text);
-}
-</style>
 </head>
 
 <body>
@@ -198,9 +180,7 @@ h1 span {
       <div class="brand">Sam’s Club</div>
 
       <div class="card-wrap">
-        <div class="card-mask">
           <img src="Sam’s Club-giftcard.png" alt="Sam’s Club Gift Card">
-        </div>
       </div>
 
       <h1>Get <span>$750 Sam’s Club Gift Card</span></h1>
